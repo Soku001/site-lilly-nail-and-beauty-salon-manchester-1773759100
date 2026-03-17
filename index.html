@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LILLY NAIL AND BEAUTY SALON MANCHESTER | Exquisite Care, Refined Beauty</title>
+    <meta name="description" content="LILLY NAIL AND BEAUTY SALON MANCHESTER offers premium nail, beauty, and hair services. Experience unparalleled pampering at our Manchester salon.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --primary-accent: #1B4F72; /* Deep Teal */
+            --background-color: #F8F8F4; /* Soft Cream */
+            --text-color: #333333; /* Dark Grey */
+            --subtle-accent: #CFA660; /* Gold/Bronze */
+            --white-color: #ffffff;
+
+            --font-heading: 'Josefin Sans', sans-serif;
+            --font-body: 'Raleway', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-accent);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--primary-accent);
+            line-height: 1.2;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        .section-padding {
+            padding: 4rem 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-accent);
+            color: var(--white-color);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: var(--subtle-accent);
+            transform: translateY(-2px);
+        }
+
+        /* Header & Navigation */
+        .header {
+            background-color: var(--white-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center; /* Center links if they wrap */
+            margin-top: 0.5rem; /* Add some space on smaller screens if they wrap */
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            padding-bottom: 0.2rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-accent);
+            border-bottom: 2px solid var(--primary-accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(27, 79, 114, 0.7), rgba(27, 79, 114, 0.7)), url('https://source.unsplash.com/featured/1600x900/?hair,salon,interior,modern') no-repeat center center/cover;
+            color: var(--white-color);
+            text-align: center;
+            padding: 8rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--white-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            color: var(--white-color);
+            opacity: 0.9;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background-color: var(--white-color);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--subtle-accent);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            color: var(--primary-accent);
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            flex-grow: 1; /* Allow content to grow */
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px; /* Fixed height for consistency */
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(27, 79, 114, 0.8); /* Primary accent with transparency */
+            color: var(--white-color);
+            padding: 1rem;
+            text-align: center;
+            font-weight: 500;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Stylists Section */
+        .stylist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stylist-card {
+            background-color: var(--white-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stylist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .stylist-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .stylist-info {
+            padding: 1.5rem;
+        }
+
+        .stylist-info h3 {
+            color: var(--primary-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stylist-info p {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* New Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            background-color: var(--white-color);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: var(--subtle-accent);
+            flex-shrink: 0;
+        }
+
+        .feature-content h3 {
+            color: var(--primary-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-content p {
+            font-size: 0.95rem;
+            color: var(--text-color);
+        }
+
+        /* Reviews Section */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background-color: var(--white-color);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .review-card .stars {
+            color: var(--subtle-accent);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .review-card p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .review-card .author {
+            font-weight: 700;
+            color: var(--primary-accent);
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info-block {
+            background-color: var(--white-color);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-info-block h3 {
+            color: var(--primary-accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        .contact-item i {
+            color: var(--subtle-accent);
+            font-size: 1.5rem;
+            width: 2rem;
+            text-align: center;
+        }
+
+        .contact-form {
+            background-color: var(--white-color);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary-accent);
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-color);
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-accent);
+            box-shadow: 0 0 0 2px rgba(27, 79, 114, 0.2);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-accent);
+            color: var(--white-color);
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer .logo {
+            color: var(--white-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--white-color);
+            opacity: 0.8;
+            transition: opacity 0.3s ease, color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--subtle-accent);
+        }
+
+        .footer-contact-info {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .footer-contact-info p {
+            margin-bottom: 0.5em;
+        }
+        
+        .footer-contact-info a {
+            color: var(--white-color);
+            text-decoration: underline;
+        }
+        .footer-contact-info a:hover {
+            color: var(--subtle-accent);
+        }
+
+
+        .copyright {
+            margin-top: 2rem;
+            opacity: 0.7;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366; /* WhatsApp Green */
+            color: var(--white-color);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                margin-top: 1rem;
+                flex-direction: column;
+                gap: 0.8rem;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 6rem 1.5rem;
+                min-height: 60vh;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-padding {
+                padding: 3rem 0;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1.5fr; /* Info on left, form on right */
+            }
+            .nav-links {
+                margin-top: 0; /* Remove top margin on larger screens */
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .hero {
+                padding: 10rem 1.5rem;
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+
+            .hero p {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="#" class="logo">LILLY SALON</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#stylists">Stylists</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Refined Beauty, Exquisite Care.</h1>
+            <p>Experience unparalleled pampering at Manchester's premier beauty destination. Step into a world where luxury meets precision.</p>
+            <a href="#contact" class="btn">Book Your Experience</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container text-center">
+            <h2>Our Signature Services</h2>
+            <p>At LILLY Salon, we offer a comprehensive range of beauty treatments designed to enhance your natural elegance.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fa-solid fa-hand-sparkles"></i>
+                    <h3>Nail Artistry</h3>
+                    <p>From luxurious manicures and rejuvenating pedicures to stunning gel extensions and bespoke nail art, our technicians craft perfection for your hands and feet.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-cut"></i>
+                    <h3>Hair Styling & Care</h3>
+                    <p>Transform your look with expert cuts, vibrant colours, professional blowouts, and deep conditioning treatments. We also specialise in elegant bridal hair.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-face-flushed"></i>
+                    <h3>Skincare & Facials</h3>
+                    <p>Indulge in bespoke facial treatments tailored to your skin's unique needs. From anti-aging solutions to hydrating therapies, achieve a radiant, healthy glow.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-eye"></i>
+                    <h3>Beauty Enhancements</h3>
+                    <p>Accentuate your features with our precise lash extensions, expert brow shaping, tinting, and professional waxing services for a polished finish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding" style="background-color: var(--white-color);">
+        <div class="container text-center">
+            <h2>Our Style Gallery</h2>
+            <p>Discover inspiration in our curated collection of beautiful transformations and elegant designs.</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/featured/600x400/?beauty,treatment" alt="Professional beauty treatment results">
+                    <div class="gallery-caption">Elegant Manicure</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/featured/600x400/?salon,aesthetic" alt="Modern salon interior aesthetic">
+                    <div class="gallery-caption">Chic Hair Colour</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/featured/600x400/?hair,braid" alt="Intricate hair braid style">
+                    <div class="gallery-caption">Artistic Braids</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/featured/600x400/?nails,gel" alt="Beautiful gel nails">
+                    <div class="gallery-caption">Gel Nail Perfection</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/featured/600x400/?facial,skin" alt="Relaxing facial treatment">
+                    <div class="gallery-caption">Rejuvenating Facial</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/featured/600x400/?eyelashes,extension" alt="Lash extensions">
+                    <div class="gallery-caption">Lush Lash Extensions</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stylist Profiles Section -->
+    <section id="stylists" class="section-padding">
+        <div class="container text-center">
+            <h2>Meet Our Expert Team</h2>
+            <p>Our highly skilled and passionate stylists are dedicated to bringing your beauty vision to life.</p>
+
+            <div class="stylist-grid">
+                <div class="stylist-card">
+                    <img src="https://source.unsplash.com/featured/400x400/?portrait,woman,salon,stylist" alt="Portrait of Eleanor Vance, Master Stylist">
+                    <div class="stylist-info">
+                        <h3>Eleanor Vance</h3>
+                        <p>Master Hair Stylist</p>
+                        <p>With over a decade of experience, Eleanor is renowned for her precision cuts, innovative colour techniques, and exquisite bridal hair designs.</p>
+                    </div>
+                </div>
+                <div class="stylist-card">
+                    <img src="https://source.unsplash.com/featured/400x400/?portrait,woman,nails,artist" alt="Portrait of Chloe Davies, Nail Art Expert">
+                    <div class="stylist-info">
+                        <h3>Chloe Davies</h3>
+                        <p>Lead Nail Artist</p>
+                        <p>Chloe brings artistic flair to every manicure and pedicure, specialising in bespoke nail art, durable gel extensions, and soothing hand treatments.</p>
+                    </div>
+                </div>
+                <div class="stylist-card">
+                    <img src="https://source.unsplash.com/featured/400x400/?portrait,woman,skincare,specialist" alt="Portrait of Isabella Reed, Skincare Specialist">
+                    <div class="stylist-info">
+                        <h3>Isabella Reed</h3>
+                        <p>Skincare Specialist</p>
+                        <p>Isabella's passion lies in healthy, glowing skin. She provides expert facials and skincare advice, helping clients achieve their best complexion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products We Use Section (Integrates About Image) -->
+    <section id="products" class="section-padding" style="background-color: var(--white-color);">
+        <div class="container">
+            <div class="contact-grid" style="align-items: center; grid-template-columns: 1fr 1fr;">
+                <div class="contact-info-block" style="box-shadow: none;">
+                    <h2>Only The Finest Products</h2>
+                    <p>At LILLY Salon, we believe that exceptional results come from exceptional products. We meticulously select professional-grade lines known for their quality, efficacy, and commitment to hair and skin health.</p>
+                    <p>Our commitment ensures that every treatment you receive is not only luxurious but also beneficial, leaving you feeling and looking your absolute best. We partner with leading brands trusted by industry professionals worldwide.</p>
+                    <a href="#contact" class="btn">Discover Your Perfect Treatment</a>
+                </div>
+                <div class="contact-info-block" style="box-shadow: none; padding: 0;">
+                    <img src="https://source.unsplash.com/featured/900x600/?hair,styling" alt="A stylist working on hair, showcasing professional products" style="border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Features Section -->
+    <section id="features" class="section-padding">
+        <div class="container text-center">
+            <h2 style="color: var(--subtle-accent);">Now Available at LILLY Salon</h2>
+            <p>Enhancing your experience with innovative solutions for unparalleled convenience and support.</p>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fa-solid fa-comments"></i>
+                    <div class="feature-content">
+                        <h3>Live Chat</h3>
+                        <p>Get instant answers to your questions and immediate support, 24/7, right from our website.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <div class="feature-content">
+                        <h3>Online Booking</h3>
+                        <p>Effortlessly schedule your next appointment directly through our website, at your convenience, without needing to call.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-robot"></i>
+                    <div class="feature-content">
+                        <h3>AI Assistant</h3>
+                        <p>Our intelligent AI assistant is here to help, providing automatic answers to common questions about services and availability.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <div class="feature-content">
+                        <h3>AI Voice Agent</h3>
+                        <p>Every call answered, every inquiry handled. Our AI Voice Agent ensures you never miss an important conversation, even outside salon hours.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div class="feature-content">
+                        <h3>WhatsApp Integration</h3>
+                        <p>Connect with us instantly on WhatsApp for quick messages, appointment queries, and instant replies.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <div class="feature-content">
+                        <h3>Live Google Reviews</h3>
+                        <p>See what our cherished clients are saying, updated automatically and in real-time, right here on our site.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section-padding" style="background-color: var(--white-color);">
+        <div class="container text-center">
+            <h2>What Our Clients Say</h2>
+            <p>Hear from our valued clients about their exceptional experiences at LILLY Salon.</p>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Lilly Salon is simply the best! Eleanor gave me the most stunning haircut and colour I've ever had. Truly a gem in Manchester."</p>
+                    <div class="author">- Sarah Thompson, Didsbury</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"My nails by Chloe are always flawless and last ages. The atmosphere is so relaxing and chic. Highly recommend for anyone looking for a touch of luxury."</p>
+                    <div class="author">- Emily White, Spinningfields</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"The skincare treatments are divine. Isabella has transformed my complexion. It's more than a salon; it's an experience in self-care."</p>
+                    <div class="author">- Jessica Lee, Altrincham</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="text-center">Get In Touch With Us</h2>
+            <p class="text-center">We look forward to welcoming you to LILLY Nail and Beauty Salon Manchester.</p>
+
+            <div class="contact-grid">
+                <div class="contact-info-block">
+                    <h3>Visit & Connect</h3>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-map-marker-alt"></i>
+                        <p>14-16 Whitworth St, Manchester M1 3BS, United Kingdom</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p><a href="tel:+441614255858">+44 161 425 5858</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p><a href="mailto:lillycustomercare@gmail.com">lillycustomercare@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <p><a href="https://wa.me/+441614255858" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send Us an Enquiry</h3>
+                    <form action="#" method="POST"> <!-- In a real scenario, this would post to a backend service -->
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <a href="#home" class="logo">LILLY SALON</a>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#stylists">Stylists</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="footer-contact-info">
+                <p>14-16 Whitworth St, Manchester M1 3BS, UK</p>
+                <p>Phone: <a href="tel:+441614255858">+44 161 425 5858</a></p>
+                <p>Email: <a href="mailto:lillycustomercare@gmail.com">lillycustomercare@gmail.com</a></p>
+            </div>
+            <p class="copyright">&copy; 2023 LILLY NAIL AND BEAUTY SALON MANCHESTER. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+441614255858" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
